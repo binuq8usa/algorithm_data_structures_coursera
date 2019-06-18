@@ -7,7 +7,7 @@
 using namespace std;
 
 // using Karatsuba's multiplication
-// assumption digits are same
+// assumption number of digits are power of 2
 void print_vector(vector<int>& nums1, string label){
   std::cout << "Size of " << label << " : " << nums1.size() << "\t" << "[";
   for(int i = 0 ; i < nums1.size()-1; i++)
@@ -94,7 +94,6 @@ vector<int> multiplyTwoNumbers(vector<int>& nums1, vector<int>& nums2){
 }
 
 // TEST cases
-
 TEST_CASE("Reverse Sign","[reverseSign]"){
   SECTION("Single"){
     vector<int> nums1{1};
@@ -120,9 +119,7 @@ TEST_CASE("Reverse Sign","[reverseSign]"){
   }
 }
 
-
 TEST_CASE("Add Two Numbers","[addTwoNumbers]"){
-  
   SECTION("Single"){
     vector<int> nums1{1};
     vector<int> nums2{2};
@@ -160,7 +157,6 @@ TEST_CASE("Add Two Numbers","[addTwoNumbers]"){
   
 }
 
-
 TEST_CASE("Multiply Two Numbers","[multiplyTwoNumbers]"){
   
   SECTION("Multiply single digit numbers"){
@@ -184,7 +180,6 @@ TEST_CASE("Multiply Two Numbers","[multiplyTwoNumbers]"){
     REQUIRE(mul_val == vector<int>{0});
   }
   
- 
   SECTION("Multiply two digit numbers - equal size, no carry"){
     vector<int> nums1{1,2};
     vector<int> nums2{3,4};
