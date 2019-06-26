@@ -4,7 +4,7 @@ project(CountInversions)
 
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-set(CMAKE_REQUIRED_FLAGS -std=c++11)
+set(CMAKE_REQUIRED_FLAGS -std=c++17)
 
 find_package(Catch2 REQUIRED)
 
