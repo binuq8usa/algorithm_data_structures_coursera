@@ -51,3 +51,6 @@ build/**
 
 # DS Store files
 .DS_Store
+
+# data files
+*.txt
